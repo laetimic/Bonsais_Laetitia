@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -29,10 +29,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="fiche_bonsai_v2_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="fiche_bonsai_v2_files/libs/quarto-html/anchor.min.js"></script>
 <link href="fiche_bonsai_v2_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="fiche_bonsai_v2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="fiche_bonsai_v2_files/libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="fiche_bonsai_v2_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="fiche_bonsai_v2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="fiche_bonsai_v2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="fiche_bonsai_v2_files/libs/bootstrap/bootstrap-906c63a93db69d5329a8709c14cf0e10.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="fiche_bonsai_v2_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="fiche_bonsai_v2_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="fiche_bonsai_v2_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -116,6 +116,11 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">45613</td>
 <td style="text-align: left;">Engrais</td>
 <td style="text-align: left;">Engrais</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">45805</td>
+<td style="text-align: left;">Mort</td>
+<td style="text-align: left;">pas repris</td>
 </tr>
 </tbody>
 </table>
@@ -232,8 +237,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -344,7 +347,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -571,7 +573,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
