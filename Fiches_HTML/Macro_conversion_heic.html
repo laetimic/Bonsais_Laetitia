@@ -112,7 +112,7 @@ Enabled features: cairo, freetype, fftw, ghostscript, heic, lcms, pango, raw, rs
 Disabled features: fontconfig, x11</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Définir le chemin du dossier contenant les fichiers HEIC</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>chemin_dossier <span class="ot">&lt;-</span> <span class="st">"photos"</span>  <span class="co"># Remplace par ton chemin</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>chemin_dossier <span class="ot">&lt;-</span> <span class="st">"photos_Transfert"</span>  <span class="co"># Remplace par ton chemin</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher la liste complète des fichiers dans le dossier</span></span>
@@ -121,126 +121,7 @@ Disabled features: fontconfig, x11</code></pre>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher les fichiers dans la console</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(fichiers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1] "photos/Arbre_1_2024-11-17.jpeg"                 
-  [2] "photos/Arbre_10_2011-03-25.JPG"                 
-  [3] "photos/Arbre_10_2024-11-17.jpeg"                
-  [4] "photos/Arbre_11_2024-11-17.jpeg"                
-  [5] "photos/Arbre_12_2024-11-17.jpeg"                
-  [6] "photos/Arbre_13_2024-11-17.jpeg"                
-  [7] "photos/Arbre_13_2025_03_10_rempotage.jpg"       
-  [8] "photos/Arbre_14_2024-11-17.jpeg"                
-  [9] "photos/Arbre_15_2024-11-17.jpeg"                
- [10] "photos/Arbre_16_2024-11-17.jpeg"                
- [11] "photos/Arbre_16_2025-03-13_2.jpg"               
- [12] "photos/Arbre_16_2025-03-13_bourgeons.jpg"       
- [13] "photos/Arbre_16_2025-03-13_global.jpg"          
- [14] "photos/Arbre_17_2024-11-17.jpeg"                
- [15] "photos/Arbre_18_2024-11-17.jpeg"                
- [16] "photos/Arbre_18_2024-11-17_etiquette.jpeg"      
- [17] "photos/Arbre_19_2024-11-17.jpeg"                
- [18] "photos/Arbre_2_2024-11-17.jpeg"                 
- [19] "photos/Arbre_20_2024-11-17.jpeg"                
- [20] "photos/Arbre_21_2024-11-17.jpeg"                
- [21] "photos/Arbre_22_2024-11-17.jpeg"                
- [22] "photos/Arbre_23_2024-11-17.jpeg"                
- [23] "photos/Arbre_24_2024-11-17.jpeg"                
- [24] "photos/Arbre_25_2024-11-17.jpeg"                
- [25] "photos/Arbre_25_2024-11-17_etiquette.jpeg"      
- [26] "photos/Arbre_26_2024-11-17.jpeg"                
- [27] "photos/Arbre_26_2024-11-17_etiquette.jpeg"      
- [28] "photos/Arbre_27_2024-11-17.jpeg"                
- [29] "photos/Arbre_28_2024-11-17.jpeg"                
- [30] "photos/Arbre_28_2024-11-17_etiquette.jpeg"      
- [31] "photos/Arbre_29_2024-11-17.jpeg"                
- [32] "photos/Arbre_3_2024-11-17.jpeg"                 
- [33] "photos/Arbre_30_2024-11-17.jpeg"                
- [34] "photos/Arbre_31_2024-11-17.jpeg"                
- [35] "photos/Arbre_32_2024-11-17.jpeg"                
- [36] "photos/Arbre_33_2024-11-17.jpeg"                
- [37] "photos/Arbre_34_2024-11-17.jpeg"                
- [38] "photos/Arbre_35_2024-11-17.jpeg"                
- [39] "photos/Arbre_36_2024-11-17.jpeg"                
- [40] "photos/Arbre_37_2024-11-17.jpeg"                
- [41] "photos/Arbre_38_2024-11-17.jpeg"                
- [42] "photos/Arbre_39_2024-11-17.jpeg"                
- [43] "photos/Arbre_4_2024-11-17.jpeg"                 
- [44] "photos/Arbre_40_2024-11-17.jpeg"                
- [45] "photos/Arbre_40_2025-05-10_pre_expo.jpg"        
- [46] "photos/Arbre_41_2024-11-17.jpeg"                
- [47] "photos/Arbre_42_2024-11-17.jpeg"                
- [48] "photos/Arbre_43_2024-11-17.jpeg"                
- [49] "photos/Arbre_43_2025-05-02.jpg"                 
- [50] "photos/Arbre_44_2024-11-17.jpeg"                
- [51] "photos/Arbre_45_2024-11-17.jpeg"                
- [52] "photos/Arbre_46_2024-11-17.jpeg"                
- [53] "photos/Arbre_47_2024-11-17.jpeg"                
- [54] "photos/Arbre_48_2024-11-17.jpeg"                
- [55] "photos/Arbre_49_2024-11-17.jpeg"                
- [56] "photos/Arbre_5_2024-11-17.jpeg"                 
- [57] "photos/Arbre_50_2024-11-17.jpeg"                
- [58] "photos/Arbre_51_2024-11-17.jpeg"                
- [59] "photos/Arbre_52_2024-11-17.jpeg"                
- [60] "photos/Arbre_53_2024-11-17.jpeg"                
- [61] "photos/Arbre_53_2024-11-17_tronc.jpeg"          
- [62] "photos/Arbre_54_2024-11-17.jpeg"                
- [63] "photos/Arbre_55_2024-11-17.jpeg"                
- [64] "photos/Arbre_55_2024-11-17_tronc.jpeg"          
- [65] "photos/Arbre_56_2025-05-02.jpg"                 
- [66] "photos/Arbre_57_2024-11-17.jpeg"                
- [67] "photos/Arbre_58_2024-11-17.jpeg"                
- [68] "photos/Arbre_59_2024-11-17.jpeg"                
- [69] "photos/Arbre_6_2024-11-17.jpeg"                 
- [70] "photos/Arbre_60_2024-11-17.jpeg"                
- [71] "photos/Arbre_61_2024-11-17.jpeg"                
- [72] "photos/Arbre_62_2024-11-17.jpeg"                
- [73] "photos/Arbre_63_2024-11-17.jpeg"                
- [74] "photos/Arbre_64_2024-11-17.jpeg"                
- [75] "photos/Arbre_65_2024-11-17.jpeg"                
- [76] "photos/Arbre_66_2024-11-17.jpeg"                
- [77] "photos/Arbre_67_2024-11-17.jpeg"                
- [78] "photos/Arbre_68_2024-11-17.jpeg"                
- [79] "photos/Arbre_68_2025-04-26_marcotage.jpg"       
- [80] "photos/Arbre_68_2025-04-26_marcotage_2.jpg"     
- [81] "photos/Arbre_69_2024-11-17.jpeg"                
- [82] "photos/Arbre_7_2024-11-17.jpeg"                 
- [83] "photos/Arbre_70_2024-11-25.jpeg"                
- [84] "photos/Arbre_70_2025-03-10_rempotage.jpg"       
- [85] "photos/Arbre_71_2024-11-25.jpeg"                
- [86] "photos/Arbre_71_2025-03-09_taille_rempotage.jpg"
- [87] "photos/Arbre_72_2025-01-06.jpg"                 
- [88] "photos/Arbre_73_2025-01-25.jpg"                 
- [89] "photos/Arbre_74_2025-01-25.jpg"                 
- [90] "photos/Arbre_74_2025-04-09_transpotage.jpg"     
- [91] "photos/Arbre_74_2025-05-02.jpg"                 
- [92] "photos/Arbre_75_2025-01-25.jpg"                 
- [93] "photos/Arbre_75_2025-03-09_rempotage.jpg"       
- [94] "photos/Arbre_76_2025-03-01.jpg"                 
- [95] "photos/Arbre_76_2025-04-09_transpotage.jpg"     
- [96] "photos/Arbre_76_2025-05-10_prepa_expo.jpg"      
- [97] "photos/Arbre_76_2025-05-10_prepa_expo_2.jpg"    
- [98] "photos/Arbre_76_2025-05-10_prepa_expo_3.jpg"    
- [99] "photos/Arbre_76_2025-05-10_prepa_expo_4.jpg"    
-[100] "photos/Arbre_76_2025-05-10_prepa_expo_5.jpg"    
-[101] "photos/Arbre_76_2025-05-18_prepa_expo.HEIC"     
-[102] "photos/Arbre_77_2025-03-01.jpg"                 
-[103] "photos/Arbre_77_2025-03-09_rempotage.jpg"       
-[104] "photos/Arbre_78_2025-03-01.jpg"                 
-[105] "photos/Arbre_78_2025-03-01_large.jpg"           
-[106] "photos/Arbre_78_2025-05-18_fleurs.HEIC"         
-[107] "photos/Arbre_79_2025-03-01.jpg"                 
-[108] "photos/Arbre_79_2025-05-02.jpg"                 
-[109] "photos/Arbre_8_2024-11-17.jpeg"                 
-[110] "photos/Arbre_80_2025-03-10.jpg"                 
-[111] "photos/Arbre_81_2025-05-02.jpg"                 
-[112] "photos/Arbre_82_2025-05-02.jpg"                 
-[113] "photos/Arbre_83_2025-05-02.jpg"                 
-[114] "photos/Arbre_84_2025-05-18.HEIC"                
-[115] "photos/Arbre_84_2025-05-18_fleurs.HEIC"         
-[116] "photos/Arbre_85_2025-05-18.HEIC"                
-[117] "photos/Arbre_86_2025-05-18.HEIC"                
-[118] "photos/Arbre_86_2025-05-18_feuilles.HEIC"       
-[119] "photos/Arbre_9_2024-11-17.jpeg"                 
-[120] "photos/Arbre_manquant.JPG"                      </code></pre>
+<pre><code>[1] "photos_Transfert/IMG_4970.HEIC" "photos_Transfert/IMG_4971.HEIC"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lister tous les fichiers HEIC dans le dossier</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>fichiers_heic <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path =</span> chemin_dossier, <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.HEIC$"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)</span>
@@ -254,13 +135,7 @@ Disabled features: fontconfig, x11</code></pre>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(fichiers_heic) } <span class="co"># Affiche la liste des fichiers trouvés</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "📂 Fichiers HEIC trouvés :"
-[1] "photos/Arbre_76_2025-05-18_prepa_expo.HEIC"
-[2] "photos/Arbre_78_2025-05-18_fleurs.HEIC"    
-[3] "photos/Arbre_84_2025-05-18.HEIC"           
-[4] "photos/Arbre_84_2025-05-18_fleurs.HEIC"    
-[5] "photos/Arbre_85_2025-05-18.HEIC"           
-[6] "photos/Arbre_86_2025-05-18.HEIC"           
-[7] "photos/Arbre_86_2025-05-18_feuilles.HEIC"  </code></pre>
+[1] "photos_Transfert/IMG_4970.HEIC" "photos_Transfert/IMG_4971.HEIC"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Boucle pour convertir chaque fichier</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (fichier <span class="cf">in</span> fichiers_heic) {</span>
@@ -280,20 +155,10 @@ Disabled features: fontconfig, x11</code></pre>
 <span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"🗑️ Supprimé :"</span>, fichier))</span>
 <span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "✅ Converti : photos/Arbre_76_2025-05-18_prepa_expo.HEIC → photos/Arbre_76_2025-05-18_prepa_expo.jpg"
-[1] "🗑️ Supprimé : photos/Arbre_76_2025-05-18_prepa_expo.HEIC"
-[1] "✅ Converti : photos/Arbre_78_2025-05-18_fleurs.HEIC → photos/Arbre_78_2025-05-18_fleurs.jpg"
-[1] "🗑️ Supprimé : photos/Arbre_78_2025-05-18_fleurs.HEIC"
-[1] "✅ Converti : photos/Arbre_84_2025-05-18.HEIC → photos/Arbre_84_2025-05-18.jpg"
-[1] "🗑️ Supprimé : photos/Arbre_84_2025-05-18.HEIC"
-[1] "✅ Converti : photos/Arbre_84_2025-05-18_fleurs.HEIC → photos/Arbre_84_2025-05-18_fleurs.jpg"
-[1] "🗑️ Supprimé : photos/Arbre_84_2025-05-18_fleurs.HEIC"
-[1] "✅ Converti : photos/Arbre_85_2025-05-18.HEIC → photos/Arbre_85_2025-05-18.jpg"
-[1] "🗑️ Supprimé : photos/Arbre_85_2025-05-18.HEIC"
-[1] "✅ Converti : photos/Arbre_86_2025-05-18.HEIC → photos/Arbre_86_2025-05-18.jpg"
-[1] "🗑️ Supprimé : photos/Arbre_86_2025-05-18.HEIC"
-[1] "✅ Converti : photos/Arbre_86_2025-05-18_feuilles.HEIC → photos/Arbre_86_2025-05-18_feuilles.jpg"
-[1] "🗑️ Supprimé : photos/Arbre_86_2025-05-18_feuilles.HEIC"</code></pre>
+<pre><code>[1] "✅ Converti : photos_Transfert/IMG_4970.HEIC → photos_Transfert/IMG_4970.jpg"
+[1] "🗑️ Supprimé : photos_Transfert/IMG_4970.HEIC"
+[1] "✅ Converti : photos_Transfert/IMG_4971.HEIC → photos_Transfert/IMG_4971.jpg"
+[1] "🗑️ Supprimé : photos_Transfert/IMG_4971.HEIC"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">🎉 Conversion terminée !"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
