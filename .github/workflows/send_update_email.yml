@@ -1,0 +1,42 @@
+name: Envoyer email de mise à jour
+
+on:
+  push:
+    branches: [ main ]  # ou "gh-pages" si tu utilises cette branche pour GitHub Pages
+  workflow_dispatch:     # Optionnel : pour tester manuellement
+
+jobs:
+  send-update-email:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Récupère tout l'historique (nécessaire pour les infos du commit)
+
+      - name: Configurer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Récupérer les infos du commit
+        id: commit-info
+        run: |
+          echo "COMMIT_HASH=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+          echo "COMMIT_MESSAGE=$(git log -1 --pretty=%B | head -n 1)" >> $GITHUB_OUTPUT
+          echo "REPO_NAME=${{ github.repository }}" >> $GITHUB_OUTPUT
+          echo "REPO_ORG=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
+
+      - name: Envoyer l'email
+        run: python scripts/send_update_email.py
+        env:
+          COMMIT_HASH: ${{ steps.commit-info.outputs.COMMIT_HASH }}
+          COMMIT_MESSAGE: ${{ steps.commit-info.outputs.COMMIT_MESSAGE }}
+          REPO_NAME: ${{ steps.commit-info.outputs.REPO_NAME }}
+          REPO_ORG: ${{ steps.commit-info.outputs.REPO_ORG }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
