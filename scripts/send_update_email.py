@@ -32,6 +32,9 @@ msg = MIMEText(corps)
 msg['Subject'] = sujet
 msg['From'] = os.getenv('SMTP_USER')
 msg['To'] = os.getenv('EMAIL_TO')
+msg['Bcc'] = os.getenv('SMTP_USER')
+
+
 
 # Envoi de l'email
 try:
