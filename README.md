@@ -1,3 +1,4 @@
 # Bonsais_Laetitia
 
-##test envoi sms
+## Màj
+Ajout d'un envoi de mail automatique à chaque mise à jour
